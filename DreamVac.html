@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1> Tokyo, Japan</h1>
+<style>
+	body {
+		background-color: orange;
+	}
+	
+	img {
+	margin: center;
+	width: 500px;
+	}
+</style>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBRPi4H3ROFM0KDej_GAPWMpS-GkW31RRs"></script>
+<script>
+function initialize() {
+  var myCenter = new google.maps.LatLng(35.7039833,139.7332916);
+  var mapProp = {
+    center:myCenter,
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var marker = new google.maps.Marker({
+  	position:myCenter,
+  });
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  marker.setMap(map);
+  // second map
+  var sMap = new google.maps.LatLng(35.7147448,139.7964156);
+  var sMapProp = {
+    center:sMap,
+    zoom:19,
+    mapTypeId:google.maps.MapTypeId.SATELLITE
+  };
+  var marker = new google.maps.Marker({
+  	position:sMap,
+  });
+  var sMap= new google.maps.Map(document.getElementById("sMap"),sMapProp);
+  marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+</script>
+</head>
+
+<body>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+<div id="sMap" style="width:500px;height:380px;"></div>
+<img src="https://ada-angeles-prod.s3.amazonaws.com/uploads/picture/article_image/6061/Tokyo_Japan_Credit_Sean_Pavone_via_wwwshutterstockcom_CNA_1.jpg">
+
+<p>
+Tokyo, Japan's busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. 
+The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. 
+The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).
+
+
+(Map2) Sensō-ji is an ancient Buddhist temple located in Asakusa, Tokyo, Japan. 
+It is Tokyo's oldest temple, and one of its most significant. 
+Formerly associated with the Tendai sect of Buddhism,
+ it became independent after World War II.
+
+
+</p>
+
+<p>
+https://www.google.com/maps/place/Sensō-ji/@35.7147941,139.7965849,91m/data=!3m1!1e3!4m5!3m4!1s0x0:0x6c0d289a8292810d!8m2!3d35.714765!4d139.7966554
+https://ada-angeles-prod.s3.amazonaws.com/uploads/picture/article_image/6061/Tokyo_Japan_Credit_Sean_Pavone_via_wwwshutterstockcom_CNA_1.jpg
+</p>
+
+
+
+
+
+
+</body>
+
+
+</html>
